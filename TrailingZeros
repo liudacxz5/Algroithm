@@ -1,0 +1,23 @@
+public class Solution {
+    /*
+     * @param n: An integer
+     * @return: An integer, denote the number of trailing zeros in n!
+     */
+    public long trailingZeros(long n) {
+        // write your code here, try to do it without arithmetic operators.
+        //记录结果
+        long result = 0;
+        long a = n/5;
+        //
+        while(a!=0){
+            result+=a;
+            a=solution(a);
+        }
+        return result;
+
+    }
+    
+    public long solution(long a ){
+        return a/5;
+    }
+}
